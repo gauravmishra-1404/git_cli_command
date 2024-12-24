@@ -42,8 +42,28 @@ nano ~/.gitconfig
 git clone https/ssh/github CLI command 
 git --status
 git --version
-git init --> used to initiate the branch on current repo
+git init --> used to initiate the branch on current directory or keep an eye on the directory or file for any change.
+
 git status --> check all the files status of the repo.
 git add .  --> made ready to commit the file who having changed.
 git commit -m "message_user" -m "discription_message" --> it commit the changes you made
 git push --> sync your commit to github accout.
+
+***************SSHKey**********************
+Using the SSH protocol, you can connect and authenticate to remote servers and services. With SSH keys, you can connect to GitHub without supplying your username and personal access token at each visit. You can also use an SSH key to sign commits.
+
+SSH key: help us connect local machine to the github account.
+
+*****SSH key i have generate locally on machine.
+
+command: ssh-keygen -t rsa -b 4096 -C "gaurav.mishra.31.4@mountblue.tech"
+
+There are 2 files generated which contain ssh key:
+1. testKey ---> private ssh key use to show the machine that i am the user for authentication.
+2. testKey.pub ---> public ssh key we put on the github. it require when i need to push into repo.
+
+***only private key generate the public key.
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+git push origin master ---> origin signifies the location of the git repo
+                            master is the brach that we want to push to
